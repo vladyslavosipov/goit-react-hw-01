@@ -1,27 +1,27 @@
-.table {
-    width: 100%;
-    border: 1px solid black;
-    border-collapse: collapse;
-    margin-bottom: 30px;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .thead {
-    background-color: rgb(46, 46, 46);
-    color: white;
-    font-weight: 500;
-  }
-  .tbody {
-    color: black;
-    text-align: center;
-  }
-  .tr:nth-child(even) {
-    background-color: rgb(185, 185, 185);
-  }
-  .th,
-  .td {
-    font-size: 20px;
-    padding: 5px 0;
-    font-weight: inherit;
-    border: 1px solid black;
-    width: calc(100% / 3);
-  }
+
+import userData from "./userData.json";
+import Profile from "./Profile/Profile";
+import friends from "../friends.json";
+import FriendList from "./FriendList/FriendList";
+import transactions from "../transactions.json";
+import TransactionHistory from "./TransactionHistory/TransactionHistory";
+
+
+const App = () => {
+  return (
+    <>
+      <Profile
+        name={userData.username}
+        tag={userData.tag}
+        location={userData.location}
+        image={userData.avatar}
+        stats={userData.stats}
+      />
+      <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
+    </>
+  );
+};
+
+
+export default App;
