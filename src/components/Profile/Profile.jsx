@@ -1,4 +1,4 @@
-import css from "./Profile.module.cs"
+import css from "./Profile.module.css"
 
 const Profile = ({ name, image, tag, location, stats }) => (
 	<div className={css.card}>
