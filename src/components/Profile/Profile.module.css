@@ -1,25 +1,53 @@
-.table {
-    width: 500px;
-    height: auto;
-    border-collapse: collapse;
-    margin-top: 20px;
+.wrapper {
+    width: 320px;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding-top: 10px;
+    margin: 0 auto 48px;
+    overflow: hidden;
   }
-  
-  .titles {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .avatar {
+    width: 132px;
+    border-radius: 50%;
     background-color: black;
-    color: white;
   }
-  
-  .titles_slot {
-    padding: 5px;
-    border: 1px solid black;
+  .username {
+    padding-top: 10px;
+    font-size: 30px;
+    font-weight: 700;
   }
-  
-  .data_slot {
-    padding: 5px;
-    border: 1px solid black;
+  .tag {
+    padding-top: 10px;
+    color: rgb(190, 188, 188);
   }
-  
-  .data_slot_horizontal:nth-child(2n) {
-    background-color: lightgray;
+  .location {
+    margin-bottom: 10px;
+    color: rgb(190, 188, 188);
+  }
+  .list {
+    display: flex;
+    border-top: 2px solid rgb(142, 140, 140);
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc(100% / 3);
+    padding: 16px 0;
+    align-items: center;
+    background-color: rgb(209, 208, 208);
+  }
+  .item:not(:last-child) {
+    border-right: 2px solid rgb(142, 140, 140);
+  }
+
+  .statsInfo {
+    font-weight: 700;
   }

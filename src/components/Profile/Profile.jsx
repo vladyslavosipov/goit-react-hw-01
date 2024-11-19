@@ -1,28 +1,28 @@
-import transactions from '../../transactions.json'
-import css from './TransactionHistory.module.css'
-
-const TransactionHistory = ({ items }) => {
-    return (
-        <table className={css.table}>
-  <thead>
-    <tr className={css.titles}>
-      <th className={css.titles_slot}>Type</th>
-      <th className={css.titles_slot}>Amount</th>
-      <th className={css.titles_slot}>Currency</th>
-    </tr>
-  </thead>
-
-  <tbody>
-                {items.map(item => (
-                    <tr className={css.data_slot_horizontal} key={item.id}>
-                        <td className={css.data_slot}>{item.type}</td>
-                        <td className={css.data_slot}>{item.amount}</td>
-                        <td className={css.data_slot}>{item.currency}</td>
-       </tr>
-   ))}
-  </tbody>
-</table>
-    )
-}
-
-export default TransactionHistory;
+import s from "./Profile.module.css";
+const Profile = ({ user }) => {
+  return (
+    <div className={s.wrapper}>
+      <div className={s.card}>
+        <img className={s.avatar} src={user.avatar} alt="User avatar" />
+        <p className={s.username}>{user.username}</p>
+        <p className={s.tag}>@{user.tag}</p>
+        <p className={s.location}>{user.location}</p>
+      </div>
+      <ul className={s.list}>
+        <li className={s.item}>
+          <span className={s.statsName}>Followers</span>
+          <span className={s.statsInfo}>{user.stats.followers}</span>
+        </li>
+        <li className={s.item}>
+          <span className={s.statsName}>Views</span>
+          <span className={s.statsInfo}>{user.stats.views}</span>
+        </li>
+        <li className={s.item}>
+          <span className={s.statsName}>Likes</span>
+          <span className={s.statsInfo}>{user.stats.likes}</span>
+        </li>
+      </ul>
+    </div>
+  );
+};
+export default Profile;

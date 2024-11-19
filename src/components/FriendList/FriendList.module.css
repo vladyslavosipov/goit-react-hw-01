@@ -1,18 +1,12 @@
 .list {
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 10px;
-  list-style: none;
-  margin-top: 20px;
+  margin: auto;
+  width: 560px;
 }
-
 .item {
-  background-color: #fff;
-  border: 1px solid black;
-  border-radius: 10px;
-  color: black;
-  padding: 20px;
   width: 100px;
-  height: auto;
+  border: 1px solid black;
+  padding-top: 10px;
+  border-radius: 8px;
 }
